@@ -4,6 +4,8 @@ By default, ERB compiles a script from the template and stores the result as a s
 This is not great when dealing with templates that could end up being very large after rendering.
 ERB::FileOut provides a way to write the result of a template to disk instead of storing it in memory.
 
+[![Build Status](https://travis-ci.org/matchbookmac/erb-file_out.svg?branch=master)](https://travis-ci.org/matchbookmac/erb-file_out)
+
 [![Code Climate](https://codeclimate.com/github/matchbookmac/erb-file_out/badges/gpa.svg)](https://codeclimate.com/github/matchbookmac/erb-file_out)
 
 [![Test Coverage](https://codeclimate.com/github/matchbookmac/erb-file_out/badges/coverage.svg)](https://codeclimate.com/github/matchbookmac/erb-file_out/coverage)
