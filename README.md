@@ -12,6 +12,8 @@ ERB::FileOut provides a way to write the result of a template to disk instead of
 
 [![Issue Count](https://codeclimate.com/github/matchbookmac/erb-file_out/badges/issue_count.svg)](https://codeclimate.com/github/matchbookmac/erb-file_out)
 
+[![Gem Version](https://badge.fury.io/rb/erb-file_out.svg)](https://badge.fury.io/rb/erb-file_out)
+
 ## Installation
 
 Add this line to your application's Gemfile:
