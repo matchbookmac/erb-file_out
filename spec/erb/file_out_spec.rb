@@ -1,11 +1,21 @@
-require "spec_helper"
+# frozen_string_literal: true
 
-describe Erb::FileOut do
-  it "has a version number" do
-    expect(Erb::FileOut::VERSION).not_to be nil
+require 'spec_helper'
+
+describe ERB::FileOut do
+  it 'has a version number' do
+    expect(ERB::FileOut::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe '#result' do
+    it 'writes the output of the erb template to a temporary file' do
+      template    = ERB::FileOut.new("This: <%= 'is' %> Pretty: <%= 'cool' %>")
+      result_file = Pathname.new(template.result)
+      result      = result_file.read
+
+      expect(result).to eq 'This: is Pretty: cool'
+
+      result_file.unlink
+    end
   end
 end
