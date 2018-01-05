@@ -2,7 +2,6 @@
 
 require 'erb'
 require 'tempfile'
-require 'erb/file_out/version'
 
 class ERB
   class FileOut < ERB

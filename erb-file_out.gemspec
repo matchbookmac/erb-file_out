@@ -3,11 +3,10 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'erb/file_out/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'erb-file_out'
-  spec.version       = ERB::FileOut::VERSION
+  spec.version       = File.read(File.expand_path('../VERSION', __FILE__)).strip
   spec.authors       = ['Ian C. MacDonald']
   spec.email         = ['ian@iancmacdonald.com']
 
@@ -21,16 +20,14 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/matchbookmac/erb-file_out'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
+  spec.files         = Dir['lib/**/*.rb']
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.13'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop', '~> 0.46'
-  spec.add_development_dependency 'dotenv', '~> 2.1.1'
-  spec.add_development_dependency 'simplecov', '~> 0.12'
-  spec.add_development_dependency 'codeclimate-test-reporter', '~> 1.0.0'
+  spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'dotenv'
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'codeclimate-test-reporter'
 end

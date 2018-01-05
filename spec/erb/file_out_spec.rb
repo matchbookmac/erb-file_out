@@ -3,10 +3,6 @@
 require 'spec_helper'
 
 describe ERB::FileOut do
-  it 'has a version number' do
-    expect(ERB::FileOut::VERSION).not_to be nil
-  end
-
   describe '#result' do
     it 'writes the output of the erb template to a temporary file' do
       template    = ERB::FileOut.new("This: <%= 'is' %> Pretty: <%= 'cool' %>")
